@@ -1,0 +1,306 @@
+/* .app {
+    text-align: center;
+    font-family: Arial, sans-serif
+}
+
+.home {
+    padding: 20px;
+}
+
+.task-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-task-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-task-button:hover {
+    background-color: #28a745;
+}
+
+.task-sections {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.task-section {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30%;
+    padding: 10px;
+}
+
+.task-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}  */
+
+
+/* Global Styles */
+.app {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: lightblue; /* Light Gray Background */
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.home {
+    padding: 20px;
+    background-color: #ffffff; /* White Background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Task Form */
+.task-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.add-task-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745; /* Green */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.add-task-button:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+/* Task Sections */
+.task-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual Task Section */
+.task-section {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 32%;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
+}
+
+/* Different Background Colors for Sections */
+.task-section:nth-child(1) {
+    background-color: #fff3cd; /* Light Yellow for TO-DO */
+}
+
+.task-section:nth-child(2) {
+    background-color: #d1ecf1; /* Light Blue for Ongoing */
+}
+
+.task-section:nth-child(3) {
+    background-color: #d4edda; /* Light Green for Completed */
+}
+
+.task-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Task List Items */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Buttons */
+.completed-button {
+    padding: 8px 12px;
+    margin-top: 5px;
+    border: none;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.completed-button:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+.delete-button {
+    padding: 8px 12px;
+    margin-top: 5px;
+    border: none;
+    background-color: #dc3545; /* Red */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker Red */
+}
+
+/* Spacing Between Buttons */
+.button-group {
+    display: flex;
+    gap: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-sections {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .task-section {
+        width: 100%;
+    }
+}
+
+
+/* Task Sections Container */
+.task-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Individual Task Section */
+.task-section {
+    background-color: #f4f7fb;  /* Light background for sections */
+    padding: 20px;
+    border-radius: 10px;
+    width: 32%;  /* Takes up 1/3rd of the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Task Section Hover Effect */
+.task-section:hover {
+    transform: translateY(-5px);  /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* Enhanced shadow */
+}
+
+/* Task Section Title */
+.task-section h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #333;  /* Dark color for title */
+    margin-bottom: 15px;
+}
+
+/* Task List Styling */
+.task-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* Task Input Section */
+.task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;  /* Adds space between input and button */
+    margin-bottom: 30px;
+}
+
+/* Task Input Field */
+.task-input {
+    width: 320px;
+    padding: 12px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Placeholder Styling */
+.task-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Input Field Focus Effect */
+.task-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.5);
+    background-color: #ffffff;
+}
+
+/* Add Task Button */
+.add-task-button {
+    padding: 12px 20px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.add-task-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05);
+}
